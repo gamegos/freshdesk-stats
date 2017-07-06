@@ -1,8 +1,8 @@
-## freshdesk-stats
+# freshdesk-stats
 
 Fresdesk-stats is node wrapper for freshdesk api with advanced filtering and scheduled tasks.
 
-# Dependencies
+### Dependencies
 
 | Dependency                                | Installation                                   |
 |:------------------------------------------|:-----------------------------------------------|
