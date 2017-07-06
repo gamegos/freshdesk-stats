@@ -1,0 +1,23 @@
+{
+  "name": "fresh",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon bin/www"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^1.1.0",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "epilogue": "^0.7.1",
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0",
+    "pg": "^6.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.2.1",
+    "unirest": "^0.5.1"
+  }
+}

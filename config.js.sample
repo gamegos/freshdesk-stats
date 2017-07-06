@@ -1,0 +1,16 @@
+'use strict';
+module.exports = {
+    URLs:{
+      OPEN: 'https://*.freshdesk.com/helpdesk/tickets.json',
+      HOLD: 'https://*.freshdesk.com/helpdesk/tickets/filter/on_hold.json',
+      OVERDUE: 'https://*.freshdesk.com/helpdesk/tickets/filter/overdue.json'
+    },
+    API_KEY: '',
+    options: {
+        host: '',
+        port: '',
+        path: "/api/freshdesk?target=https://example.freshdesk.com/helpdesk/tickets.json",
+        method: 'GET'
+    },
+    interval: 0.1 * 60 * 1000 // time interval for crontab
+};
