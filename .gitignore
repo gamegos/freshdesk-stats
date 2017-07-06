@@ -1,8 +1,9 @@
 TODO.md
 /node_modules
-/src
-/bin
 /src/api/routes
 /src/config/config.json
+/src/cron
+/src/api
+/bin
 /config.js
 npm-debug.log
