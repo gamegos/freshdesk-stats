@@ -1,0 +1,38 @@
+var http = require('http')
+  , cron = require('../src/cron/app')
+  , api = require('../src/api/app').app
+  , db = require('../src/api/app').db
+  , config = require('../config')
+  , cron_port = process.env.PORT || 8000
+  , api_port = process.env.PORT || 5000
+  , interval = config.interval
+  , options = config.options;
+
+//port config
+cron.set('port', cron_port);
+api.set('port', api_port);
+
+//crontab
+setInterval(function() {
+    var req = http.request(options);
+    req.on('error', function(err) {
+      console.log('Problem occurs! ', err);
+    });
+    req.end(function() {
+      console.log('Database updated!');
+    });
+}, interval);
+
+//cron
+http
+  .createServer(cron)
+  .listen(cron_port);
+
+//api
+db
+  .sync({force: true})
+  .then(function() {
+    http
+      .createServer(api)
+      .listen(api_port);
+  });
