@@ -6,15 +6,16 @@ module.exports = {
       before: function(req, res,context) {
         var MIN = 60 * 1000;
         var time = 0;
-        if(req.query.attr) {
-          context.options.attributes = (req.query.attr instanceof Array)? req.query.attr: [req.query.attr];
+        var fields = req.query.fields;
+        if(fields) {
+          context.options.attributes = fields.split(',');
         }
         if(req.query.day) {
           time += req.query.day * 24 * 60 * MIN;
           delete req.query.day;
         }
         if(req.query.hour) {
-          time = req.query.hour * 60 * MIN;
+          time += req.query.hour * 60 * MIN;
           delete req.query.hour;
         }
         if(req.query.minute) {
