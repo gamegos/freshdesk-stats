@@ -5,5 +5,19 @@
     "database": "freshdesk_dev",
     "host": "127.0.0.1",
     "dialect": "postgres"
+  },
+  "test": {
+    "username": "",
+    "password": "",
+    "database": "freshdesk_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "",
+    "password": "",
+    "database": "freshdesk_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   }
 }

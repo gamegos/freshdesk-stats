@@ -18,7 +18,6 @@ module.exports = function(epilogue, models, middleware) {
       { param: 'to_email%', attributes: ['to_email']},
       { param: 'due_by%', attributes: ['due_by']},
       { operator: '$gte', param: 'date', attributes: ['created_at']}
-
     ]
   });
   ticketRes.use(middleware);
