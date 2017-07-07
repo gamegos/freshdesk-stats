@@ -16,7 +16,9 @@ module.exports = function(epilogue, models, middleware) {
       { param: 'source%', attributes:['source_name']},
       { param: 'status%', attributes: ['status_name']},
       { param: 'to_email%', attributes: ['to_email']},
-      { param: 'game%', attributes:['custom_field']}
+      { param: 'due_by%', attributes: ['due_by']},
+      { operator: '$gte', param: 'date', attributes: ['created_at']}
+
     ]
   });
   ticketRes.use(middleware);

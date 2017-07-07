@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.JSON
       },
       created_at: {
-        type: Sequelize.STRING
+        type: Sequelize.DATE
       },
       deleted: {
         type: Sequelize.BOOLEAN
@@ -45,7 +45,7 @@ module.exports = {
         primaryKey: true
       },
       due_by: {
-        type: Sequelize.STRING
+        type: Sequelize.DATE
       },
       email_config_id: {
         type: Sequelize.BIGINT
@@ -126,7 +126,7 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       updated_at: {
-        type: Sequelize.STRING
+        type: Sequelize.DATE
       },
       urgent: {
         type: Sequelize.BOOLEAN
@@ -152,9 +152,9 @@ module.exports = {
       to_email: {
         type: Sequelize.JSON
       },
-    /*  custom_field: {
+      custom_field: {
         type: Sequelize.JSON
-      },*/
+      },
       product_id: {
         type: Sequelize.BIGINT
       },
