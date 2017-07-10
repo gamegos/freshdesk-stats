@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 
 app.get('/api/freshdesk', function(req, res) {
   var target = req.query.target;
-  var due_by = req.query.due_by;
 
   fresh.getAllTickets(function(tickets) {
     tickets.forEach(function(element) {
@@ -24,7 +23,7 @@ app.get('/api/freshdesk', function(req, res) {
         defaults: element
       });
     });
-  }, target, due_by);
+  }, target);
 });
 
 module.exports = app;

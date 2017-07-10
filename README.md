@@ -3,7 +3,7 @@
 [![NPM Version](https://img.shields.io/npm/v/npm.svg)
 [![License](https://img.shields.io/npm/l/express.svg)
 
-Fresdesk-stats is node wrapper for freshdesk api with advanced filtering and scheduled tasks.
+Fresdesk-stats is node wrapper for freshdesk api based on advanced filtering and statistical analysis.
 
 
 ### Dependencies
