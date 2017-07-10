@@ -84,7 +84,8 @@ GET /api/freshdesk/tickets?day=4&fields=requester_name,description
 ```
 ```json
 [
-  {"requester_name":"Erin M Lewis",
+  {
+    "requester_name":"Erin M Lewis",
     "description":"I still can not make the drops pop on my game. No one has responded to me about this issue. Any time I try to match nothing happens no line or anything. Please let me know if this issue will be fixed!!! Thank you"
   },
   {
