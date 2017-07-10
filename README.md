@@ -65,6 +65,12 @@ GET /api/freshdesk/tickets?requester_id=5034029181&fields=description,subject
 #gets newly created tickets within specific time interval
 GET /api/freshdesk/tickets?day=1&hour=3&minute=15
 
+#sorts in descending order
+GET /api/freshdesk/tickets?sort=-field
+
+#sorts in ascending order
+GET /api/freshdesk/tickets?sort=field
+
 ```
 
 ### License
