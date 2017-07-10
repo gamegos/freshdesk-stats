@@ -2,11 +2,6 @@
 module.exports = {
   up: function(queryInterface, Sequelize) {
     return queryInterface.createTable('tickets', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        type: Sequelize.INTEGER
-      },
       requester_id: {
         type: Sequelize.BIGINT
       },

@@ -17,7 +17,7 @@ module.exports = {
         var begin = toTimeStamp(data[0].dataValues);
         var end = toTimeStamp(data[data.length -1].dataValues);
         var result = [];
-        for(var cur = 0; begin <= end; begin += SECOND * interval) {
+        for(var cur = 0; begin < end; begin += SECOND * interval) {
           var nums = 0;
           for(; toTimeStamp(data[cur].dataValues) <= begin; nums++, cur++);
           result.push({
