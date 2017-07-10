@@ -8,12 +8,12 @@ module.exports = {
         req.query.sort = "created_at";//ascending order
         return context.continue;
       }
-    },    
+    },
     write: {
       action: function(req, res, context) {
         var SECOND = 1000;
-        var data = context.instance;//fetching results 
-        var interval = req.query.interval;        
+        var data = context.instance;//fetching results
+        var interval = req.query.interval;
         var begin = toTimeStamp(data[0].dataValues);
         var end = toTimeStamp(data[data.length -1].dataValues);
         var result = [];

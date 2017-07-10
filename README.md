@@ -77,30 +77,28 @@ GET /api/freshdesk/stats?interval=10000 #note that base of interval is second
 
 ```
 
-### Example JSON Output
+### Example
 ```bash
 #gets tickets within last 4 day
 GET /api/freshdesk/tickets?day=4&fields=requester_name,description
 ```
-
 ```json
-
 [
   {"requester_name":"Erin M Lewis",
     "description":"I still can not make the drops pop on my game. No one has responded to me about this issue. Any time I try to match nothing happens no line or anything. Please let me know if this issue will be fixed!!! Thank you"
   },
-  {"requester_name":"Trellany Atwell",
+  {
+    "requester_name":"Trellany Atwell",
     "description":"I just wanted to know how do u get more tickets to complete the vending machines cuz i have been trying to complete the soup machine for the longest"
   }
 ]
 ```
 
-
 ```bash
-#get number of tickets created according to time interval
+#gets number of tickets created according to time interval
 GET /api/freshdesk/stats?interval=2000000 #interval= 2000000 seconds
+#returns {timestamp: ticket number}
 ```
-
 ```json
 [
   {"1490622360000":1},
