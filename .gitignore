@@ -5,3 +5,4 @@ TODO.md
 /config.js
 npm-debug.log
 /env.db
+.docker-compose.yml
