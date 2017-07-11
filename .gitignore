@@ -4,3 +4,4 @@ TODO.md
 /src/config/config.json
 /config.js
 npm-debug.log
+/env.db
