@@ -1,14 +1,14 @@
 version: '2'
 services:
- 
-  postgres:
+
+  db:
     restart: always
     image: "postgres"
     environment:
      POSTGRES_PASSWORD: postgres
      POSTGRES_USER: postgres
      POSTGRES_DB: freshdesk-dev-
-    ports: 
+    ports:
       - "5432:5432"
   web:
     build: .
@@ -18,4 +18,4 @@ services:
     volumes:
      - .:/usr/src/freshdesk
     links:
-      - postgres
+      - db

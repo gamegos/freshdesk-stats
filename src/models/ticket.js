@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     requester_name: DataTypes.STRING,
     associates_rdb: DataTypes.STRING,
     association_type: DataTypes.STRING,
-    cc_email: DataTypes.JSON,
+    cc_email: DataTypes.STRING,
     created_at: DataTypes.DATE,
     deleted: DataTypes.BOOLEAN,
     delta: DataTypes.BOOLEAN,
@@ -51,8 +51,8 @@ module.exports = function(sequelize, DataTypes) {
     source_name: DataTypes.STRING,
     responder_name: DataTypes.STRING,
     to_emails: DataTypes.ARRAY(DataTypes.STRING),
-    to_email: DataTypes.JSON,
-    custom_field: DataTypes.JSON,
+    to_email: DataTypes.STRING,
+    custom_field: DataTypes.STRING,
     product_id: DataTypes.BIGINT
   });
   return ticket;

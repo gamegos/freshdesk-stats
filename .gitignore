@@ -1,8 +1,10 @@
 TODO.md
 /node_modules
 /src/api/routes
-/src/config/config.json
-/config.js
+/config/api/index.js
+/config/dialect/development.json
+/config/dialect/production.json
 npm-debug.log
 /env.db
 .docker-compose.yml
+Makefile

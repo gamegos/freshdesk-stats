@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       cc_email: {
-        type: Sequelize.JSON
+        type: Sequelize.STRING
       },
       created_at: {
         type: Sequelize.DATE
@@ -145,10 +145,10 @@ module.exports = {
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
       to_email: {
-        type: Sequelize.JSON
+        type: Sequelize.STRING
       },
       custom_field: {
-        type: Sequelize.JSON
+        type: Sequelize.STRING
       },
       product_id: {
         type: Sequelize.BIGINT

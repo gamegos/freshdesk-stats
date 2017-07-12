@@ -4,7 +4,7 @@ var express = require('express')
   , bodyParser = require('body-parser')
   , app = express()
   , Ticket = require('../models').ticket
-  , fresh = require('./api/freshdesk');
+  , fresh = require('./api');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
