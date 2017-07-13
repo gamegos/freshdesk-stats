@@ -5,8 +5,7 @@ var http = require('http')
   , config = require('../config')
   , cron_port = process.env.PORT || 8000
   , api_port = process.env.PORT || 5000
-  , interval = config.interval
-  , options = config.options;
+  , interval = config.Interval;
 
 //port config
 cron.set('port', cron_port);
@@ -18,7 +17,7 @@ setInterval(function() {
       'host': config.host,
       'port': 8000,
       'method': 'GET',
-      'path': '/api/freshdesk?target=https://' + config.domain + '.freshdesk.com/helpdesk/tickets.json'
+      'path': '/api/freshdesk?target=https://' + config.Domain + '.freshdesk.com/helpdesk/tickets.json'
     });
 
     req.on('error', function(err) {
