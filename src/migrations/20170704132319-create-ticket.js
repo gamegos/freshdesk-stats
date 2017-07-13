@@ -148,7 +148,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       custom_field: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       product_id: {
         type: Sequelize.BIGINT

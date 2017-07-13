@@ -52,8 +52,20 @@ module.exports = function(sequelize, DataTypes) {
     responder_name: DataTypes.STRING,
     to_emails: DataTypes.ARRAY(DataTypes.STRING),
     to_email: DataTypes.STRING,
-    custom_field: DataTypes.STRING,
+    custom_field: DataTypes.TEXT,
     product_id: DataTypes.BIGINT
+  }, {
+    setterMethods: {
+      custom_field: function(value) {
+        this.setDataValue('custom_field', JSON.stringify(value));
+      },
+      to_email: function(value) {
+        this.setDataValue('to_email', JSON.stringify(value));
+      },
+      cc_email: function(value) {
+        this.setDataValue('cc_email', JSON.stringify(value));
+      }
+    }
   });
   return ticket;
 };
