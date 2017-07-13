@@ -8,7 +8,7 @@ exports.getAllTickets = function(callback, target) {
   unirest
   .get(target)
   .auth({
-    user: config.ApiKey,
+    user: config.apiKey,
     pass: 'X',
     sendImmediately: true
   })

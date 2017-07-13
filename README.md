@@ -15,11 +15,13 @@ Fresdesk-stats is node wrapper for freshdesk api based on advanced filtering and
 
 ### Installation
 
+
 ```bash
 # Install dependencies if not provided yet
-$ git clone https://github.com/Gamegos/freshdesk-stats
+$ git clone https://github.com/gamegos/freshdesk-stats
 $ npm install #run this command under project directory
 ```
+
 
 ### Quick Start
 
@@ -109,7 +111,46 @@ GET /api/freshdesk/stats?interval=2000000 #interval= 2000000 seconds
   {"1498622360000":7}
 ]
 ```
+### Using With Docker
 
+```
+Go official [![Docker Hub](https://hub.docker.com/) account and look at how to pull dialects which are compatible with sequelize(mysql, postgresql, sqlite, mariadb)
+
+```
+
+  ##### Example:
+
+  For postgresql, simply type following commands:
+
+  ```bash
+  $docker run --name some-postgres -e POSTGRES_PASSWORD=pass POSTGRES_DB:db POSTGRES_USER:user -p 5432:5432 postgres
+  # Same as your configuration options
+  ```
+
+```
+After run image container for your database, run application container:
+
+```
+
+  ##### Method 1
+
+  ```bash
+  docker pull sonmezonur/freshdesk-stats
+  docker run --rm -it -p 5000:5000 -p 8000:8000 --net host gamegos/freshdesk-stats
+  ```
+
+  ##### Method 2
+
+  ```bash
+  docker build . -t gamegos/freshdesk-stats  #run on project directory where Dockerfile located
+  docker run --rm -it -p 5000:5000 -p 8000:8000 --net host gamegos/freshdesk-stats
+  ```
+
+
+```
+Docker environment created and ready to use
+#Open localhost:5000 in browser
+```
 
 ### License
 

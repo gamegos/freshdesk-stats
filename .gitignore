@@ -4,6 +4,5 @@ TODO.md
 /config/api.json
 /config/config.json
 npm-debug.log
-/env.db
 .docker-compose.yml
 Makefile

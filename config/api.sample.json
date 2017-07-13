@@ -1,5 +1,5 @@
 {
-    "ApiKey": "enter your freshdesk api key",
-    "Domain": "enter your domain",
-    "Interval": "enter time interval to update database-- base=second"
+    "apiKey": "enter your freshdesk api key",
+    "domain": "enter your domain",
+    "interval": "enter time interval to update database-- base=second"
 }
