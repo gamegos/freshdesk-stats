@@ -27,7 +27,7 @@ setInterval(function() {
     req.end(function() {
       console.log('Database updated!');
     });
-}, interval);
+}, interval * 1000);
 
 //cron
 http
