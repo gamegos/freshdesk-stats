@@ -22,16 +22,12 @@ $ git clone https://github.com/gamegos/freshdesk-stats
 $ npm install #run this command under project directory
 ```
 
+### Configuration
+
+- Customize freshdesk by filling freshdesk api key, domain and interval options in config/api.json.
+- Fill dialect options in config/config.json.
 
 ### Quick Start
-
-Create new postgres database:
-
-```bash
-$ sudo -u postgres createdb example
-```
-
-Customize configurations by filling freshdesk api key, target url and dialect options.
 
 Run migrations and execute program:
 
@@ -113,10 +109,8 @@ GET /api/freshdesk/stats?interval=2000000 #interval= 2000000 seconds
 ```
 ### Using With Docker
 
-```
-Go official [![Docker Hub](https://hub.docker.com/)] account and look at how to pull dialects which are compatible with sequelize(mysql, postgresql, sqlite, mariadb)
+Go official [Docker Hub](https://hub.docker.com/) account and look at how to use dialects which are compatible with sequelize(mysql, postgresql, sqlite, mariadb)
 
-```
 
   ##### Example:
 
@@ -127,30 +121,34 @@ Go official [![Docker Hub](https://hub.docker.com/)] account and look at how to 
   # Same as your configuration options
   ```
 
-```
-After run image container for your database, run application container:
+After run image container for database, run application container:
 
-```
 
-  ##### Method 1
+  ##### Method 1: By pulling remote dockerhub repository (suggested)
 
   ```bash
   $docker pull sonmezonur/freshdesk-stats
-  $docker run --rm -it -p 5000:5000 -p 8000:8000 --net host gamegos/freshdesk-stats
+  $docker run --rm -it -p 5000:5000 -p 8000:8000 --net host sonmezonur/freshdesk-stats
   ```
 
-  ##### Method 2
+  ##### Method 2: By building your own docker image
 
-  ```bash
-  $docker build . -t gamegos/freshdesk-stats  #run on project directory where Dockerfile located
-  $docker run --rm -it -p 5000:5000 -p 8000:8000 --net host gamegos/freshdesk-stats
-  ```
+  ###### Option 1: Dockerfile
+
+    ```bash
+    $docker build . -t tag  #run on project directory where Dockerfile located
+    $docker run --rm -it -p 5000:5000 -p 8000:8000 --net host tag
+    ```
+  ###### Option 2: Docker-compose
+
+    ```bash
+    $docker-compose up # if needed, modify docker-compose.yml
+    ```
 
 ---
-```
-Docker environment created and ready to use
-#Open localhost:5000 in browser
-```
+Docker environment created and ready to use.
+
+Open localhost:5000 in browser
 
 ### License
 
