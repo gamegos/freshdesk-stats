@@ -126,7 +126,7 @@ After run image container for database, run application container:
 
   ##### Method 1: By pulling remote dockerhub repository (suggested)
 
-  ```bash
+```bash
   $docker pull sonmezonur/freshdesk-stats
   $docker run --rm -it -p 5000:5000 -p 8000:8000 --net host sonmezonur/freshdesk-stats
   ```
@@ -135,15 +135,12 @@ After run image container for database, run application container:
 
   ###### Option 1: Dockerfile
 
-    ```bash
     $docker build . -t tag  #run on project directory where Dockerfile located
     $docker run --rm -it -p 5000:5000 -p 8000:8000 --net host tag
-    ```
+
   ###### Option 2: Docker-compose
 
-    ```bash
     $docker-compose up # if needed, modify docker-compose.yml
-    ```
 
 ---
 Docker environment created and ready to use.
