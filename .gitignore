@@ -6,3 +6,4 @@ TODO.md
 npm-debug.log
 .docker-compose.yml
 Makefile
+/src/api/anomaly-detection/test.js

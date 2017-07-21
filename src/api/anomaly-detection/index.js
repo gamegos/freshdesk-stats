@@ -1,10 +1,12 @@
 'use strict';
 
-
 /**
  * Calculate mean of sample dataset
  * @param {Array} samples
+ * @return {number}
+ * @private
  */
+
 function mean(samples) {
   var total = samples.reduce(function(sum, value) {
     return sum + value;
@@ -16,7 +18,10 @@ function mean(samples) {
 /**
  * Calculate standard deviation of sample dataset
  * @param {Array} samples
+ * @return {number}
+ * @private
  */
+ 
 function std(samples) {
   var average = mean(samples);
   var delta = 0;
@@ -29,16 +34,25 @@ function std(samples) {
 }
 
 /**
- * Implementation of smoothed z-score algo for detecting tresholds on dataset
+ * Implementation of smoothed z-score algo for detecting thresholds on dataset
  * Go https://stackoverflow.com/a/22640362 for reference
+ * @param {Array} samples //sample data
+ * @param {number} lag //number of observations needed
+ * @param {number} threshold
+ * @param {number} influence
+ * @return {Array}
+ * @public
  */
 
-exports = module.exports = function(samples, lag, treshold, influence) {
+exports = module.exports = function(samples, lag, threshold, influence) {
   var len = samples.length;
   var filteredSamples = samples.slice(0, lag);
-  var signals, avgFilter, stdFilter;
-  signals = avgFilter = stdFilter = [];
-  for(var i = 0; i < len; i++) {
+  var signals = [];
+  var avgFilter = [];
+  var stdFilter = [];
+
+  //initializing
+  for(var i = 0; i < lag; i++) {
     signals[i] = 0;
   }
 
@@ -49,7 +63,7 @@ exports = module.exports = function(samples, lag, treshold, influence) {
   for(var i = lag; i < len; i++) {
     var data = samples[i] - avgFilter[i - 1];
 
-    if(Math.abs(data) > treshold * stdFilter[i -1]) {
+    if(Math.abs(data) > threshold * stdFilter[i -1]) {
       if(data > 0) {
         signals[i] = 1;
       } else {
@@ -64,6 +78,5 @@ exports = module.exports = function(samples, lag, treshold, influence) {
     avgFilter[i] = mean(slicedSamples);
     stdFilter[i] = std(slicedSamples);
   }
-
   return signals;
 }
