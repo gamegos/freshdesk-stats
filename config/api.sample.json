@@ -1,5 +1,21 @@
 {
     "apiKey": "enter your freshdesk api key",
     "domain": "enter your domain",
-    "interval": "enter time interval to update database-- base=second"
+    "interval": "enter time interval to update database-- base=second",
+    "transport": {
+        "service": "Gmail",
+        "auth": {
+          "user": "",
+          "pass": ""
+        },
+        "debug": "true"
+      },
+      "locals": {
+        "email": "enter target email",
+        "name": {
+          "first": "firstname of user",
+          "last": "lastname of user"
+        }
+      }
+    }
 }

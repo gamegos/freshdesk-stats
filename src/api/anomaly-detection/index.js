@@ -21,7 +21,7 @@ function mean(samples) {
  * @return {number}
  * @private
  */
- 
+
 function std(samples) {
   var average = mean(samples);
   var delta = 0;
