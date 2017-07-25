@@ -6,14 +6,15 @@ var unirest = require('unirest')
 
 exports.getAllTickets = function(callback, target) {
   unirest
-  .get(target)
+  .get('https://onrsnmz.freshdesk.com/helpdesk/tickets.json')
   .auth({
-    user: config.apiKey,
+    user: 'WHlRkjcAlPezv7pMqVkm',
     pass: 'X',
     sendImmediately: true
   })
   .end(function(response) {
     if(response.status < 400) {
+      console.log(response.body);
       var tickets = response.body;
       callback(tickets);
     } else if(response.status === 401) {

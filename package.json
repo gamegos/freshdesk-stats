@@ -10,20 +10,17 @@
   "author": "Gamegos",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.5.0",
-    "basic-auth": "^1.1.0",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
-    "bunyan": "^1.8.10",
-    "email-template": "0.0.1-1",
     "email-templates": "^2.6.0",
     "epilogue": "^0.7.1",
     "express": "^4.15.3",
     "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
     "nodemailer": "^4.0.1",
     "path": "^0.12.7",
+    "request": "^2.81.0",
     "sequelize": "^4.3.1",
-    "sequelize-cli": "^2.7.0",
     "unirest": "^0.5.1"
   },
   "devDependencies": {
