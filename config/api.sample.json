@@ -3,19 +3,17 @@
     "domain": "enter your domain",
     "interval": "enter time interval to update database-- base=second",
     "transport": {
-        "service": "Gmail",
-        "auth": {
-          "user": "",
-          "pass": ""
-        },
-        "debug": "true"
+      "service": "Gmail",
+      "auth": {
+        "user": "",
+        "pass": ""
       },
-      "locals": {
-        "email": "enter target email",
-        "name": {
-          "first": "firstname of user",
-          "last": "lastname of user"
-        }
-      }
-    }
+      "debug": "true"
+    },
+    "locals": {
+      "email": "enter target email",
+    },
+    "treshold": "enter threshold for anormality detection",
+    "influence": "enter influence for anormality detection",
+    "alertInterval": "time interval for alarm system"
 }

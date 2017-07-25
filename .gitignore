@@ -8,4 +8,3 @@ npm-debug.log
 Makefile
 /src/api/anomaly-detection/test.js
 test.js
-/src/cron

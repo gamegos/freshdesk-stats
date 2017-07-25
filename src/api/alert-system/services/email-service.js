@@ -7,8 +7,8 @@ var nodemailer = require('nodemailer')
 
 
 exports = module.exports = function(config, anomaly, callback) {
-
-  request.get('http://localhost:5000/api/freshdesk/stats?interval=360000', function(err, response, body) {
+  var param = "interval=" + config.alertInterval;
+  request.get('http://localhost:5000/api/freshdesk/stats?' + param, function(err, response, body) {
     if(err || response.statusCode >= 400) {
       return;
     }
@@ -18,7 +18,7 @@ exports = module.exports = function(config, anomaly, callback) {
       }
     });
     var lag = chunk.length - 2;
-    var signals = anomaly(chunk, lag, 5, 0);
+    var signals = anomaly(chunk, lag, config.threshold, config.influence);
     var last = signals.pop();
     // if amy anormality detected on last item, function email service
     if(last === 1) {

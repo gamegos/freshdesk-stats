@@ -6,7 +6,7 @@ module.exports = function() {
   //services
   require('./services/email-service')(config, anomaly, function(template, transport) {
     var locals = config.locals;
-
+    
     template.render(locals, function(err, result) {
       if(err) {
         return console.error(err);

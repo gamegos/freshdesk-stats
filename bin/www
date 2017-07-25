@@ -6,7 +6,8 @@ var http = require('http')
   , config = require('../config')
   , cron_port = process.env.PORT || 8000
   , api_port = process.env.PORT || 5000
-  , interval = config.interval;
+  , interval = config.interval
+  , alertInterval = config.alertInterval;
 
 //port config
 cron.set('port', cron_port);
@@ -27,9 +28,13 @@ setInterval(function() {
     req.end(function() {
       console.log('Database updated!');
     });
-
-    alert();
 }, interval * 1000);
+
+//alarm system
+setInterval(function() {
+  alert(); //time-based check, send email if any anormality detected
+}, alertInterval * 1000);
+
 
 //cron
 http
