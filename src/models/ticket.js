@@ -50,7 +50,7 @@ module.exports = function(sequelize, DataTypes) {
     priority_name: DataTypes.STRING,
     source_name: DataTypes.STRING,
     responder_name: DataTypes.STRING,
-    to_emails: DataTypes.ARRAY(DataTypes.STRING),
+    to_emails: DataTypes.TEXT,
     to_email: DataTypes.STRING,
     custom_field: DataTypes.TEXT,
     product_id: DataTypes.BIGINT
@@ -64,6 +64,9 @@ module.exports = function(sequelize, DataTypes) {
       },
       cc_email: function(value) {
         this.setDataValue('cc_email', JSON.stringify(value));
+      },
+      to_emails: function(value) {
+        this.setDataValue('to_emails', JSON.stringify(value));
       }
     }
   });

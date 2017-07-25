@@ -142,7 +142,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       to_emails: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.TEXT
       },
       to_email: {
         type: Sequelize.STRING
