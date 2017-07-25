@@ -6,9 +6,9 @@ var unirest = require('unirest')
 
 exports.getAllTickets = function(callback, target) {
   unirest
-  .get('https://onrsnmz.freshdesk.com/helpdesk/tickets.json')
+  .get(target)
   .auth({
-    user: 'WHlRkjcAlPezv7pMqVkm',
+    user: config.apiKey,
     pass: 'X',
     sendImmediately: true
   })

@@ -2,7 +2,7 @@
 var config = require('../../../config/api')
   , anomaly = require('../anomaly-detection');
 
-module.exports = function(app) {
+module.exports = function() {
   //services
   require('./services/email-service')(config, anomaly, function(template, transport) {
     var locals = config.locals;
@@ -24,5 +24,4 @@ module.exports = function(app) {
       });
     });
   });
-
 }
