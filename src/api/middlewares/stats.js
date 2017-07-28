@@ -24,7 +24,6 @@ module.exports = {
             [begin]: nums
           });
         }
-
         res.send(JSON.stringify(result));
       }
     }

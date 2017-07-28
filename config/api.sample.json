@@ -11,9 +11,9 @@
       "debug": "true"
     },
     "locals": {
-      "email": "enter target email",
+      "recepients": "comma seperated recepient list == a@example.com,b@example.com",
     },
-    "treshold": "enter threshold for anormality detection",
+    "threshold": "enter threshold for anormality detection",
     "influence": "enter influence for anormality detection",
     "alertInterval": "time interval for alarm system"
 }
