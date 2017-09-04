@@ -7,14 +7,15 @@ Fresdesk-stats is node wrapper for freshdesk api based on advanced filtering and
 
 
 ### Dependencies
+---
 
 | Dependency                                | Version    |
 |:------------------------------------------|:-----------|
 | [Node.js](http://nodejs.org/)             | 6.3.1      |
-| [Npm](https://www.npmjs.com/)             | 5.2.0      |
+| [Npm](https://www.npmjs.com/)             | 5.4.0      |
 
 ### Installation
-
+---
 
 ```bash
 # Install dependencies if not provided yet
@@ -23,16 +24,18 @@ $ npm install #run this command under project directory
 ```
 
 ### Configuration
+---
 
 - Customize freshdesk by filling freshdesk api key, domain and interval options in config/api.json.
 - Fill dialect options in config/config.json.
 
 ### Quick Start
+---
 
 Run migrations and execute program:
 
 ```bash
-$ sequelize db:migrate
+$ ./node_modules/sequelize-cli/bin/sequelize db:migrate   #or
 $ npm start # open localhost:5000 in browser
 ```
 
@@ -76,6 +79,7 @@ GET /api/freshdesk/stats?interval=10000 #note that base of interval is second
 ```
 
 ### Example
+---
 ```bash
 #gets tickets within last 4 day
 GET /api/freshdesk/tickets?day=4&fields=requester_name,description
@@ -108,6 +112,7 @@ GET /api/freshdesk/stats?interval=2000000 #interval= 2000000 seconds
 ]
 ```
 ### Using With Docker
+---
 
 Go official [Docker Hub](https://hub.docker.com/) account and look at how to use dialects which are compatible with sequelize(mysql, postgresql, sqlite, mariadb)
 
@@ -148,6 +153,7 @@ Docker environment created and ready to use.
 Open localhost:5000 in browser
 
 ### License
+---
 
 This repository released under [MIT License](https://opensource.org/licenses/MIT).
 

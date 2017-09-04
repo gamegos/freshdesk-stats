@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Stats and alarm API for freshdesk tickets",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/jshint/bin/jshint bin/www",
     "start": "NODE_ENV=development nodemon bin/www",
     "start:pro": "NODE_ENV=production nodemon bin/www"
   },
@@ -16,11 +16,13 @@
     "epilogue": "^0.7.1",
     "express": "^4.15.3",
     "lodash": "^4.17.4",
+    "mysql2": "^1.4.0",
     "node-sass": "^4.5.3",
     "nodemailer": "^4.0.1",
     "path": "^0.12.7",
     "request": "^2.81.0",
     "sequelize": "^4.3.1",
+    "sequelize-cli": "^2.8.0",
     "unirest": "^0.5.1"
   },
   "devDependencies": {
